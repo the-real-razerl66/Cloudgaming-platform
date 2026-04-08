@@ -1,0 +1,72 @@
+# Cloud Gaming VM Host Configuration
+
+# Signaling Server
+signaling:
+  url: "http://localhost:3000"
+  namespace: "/vm"
+  reconnect_attempts: 5
+  reconnect_delay: 5
+
+# VM Identification
+vm:
+  id: "vm-001"
+  hostname: "gaming-vm-01"
+  
+# Video Capture Settings
+video:
+  display: ":0"  # X11 display
+  width: 1920
+  height: 1080
+  fps: 60
+  codec: "libx264"
+  preset: "ultrafast"
+  tune: "zerolatency"
+  
+# Adaptive Bitrate Settings (in kbps)
+bitrate:
+  high: 8000      # 1080p60 for good connections
+  medium: 4000    # 720p60 for moderate connections
+  low: 2000       # 540p60 for poor connections
+  initial: "high"
+  
+# Quality Presets
+quality_presets:
+  high:
+    width: 1920
+    height: 1080
+    fps: 60
+    bitrate: 8000
+  medium:
+    width: 1280
+    height: 720
+    fps: 60
+    bitrate: 4000
+  low:
+    width: 960
+    height: 540
+    fps: 60
+    bitrate: 2000
+
+# Input Settings
+input:
+  enabled: true
+  mouse_sensitivity: 1.0
+  keyboard_layout: "us"
+  
+# Network Settings
+network:
+  stun_servers:
+    - "stun:stun.l.google.com:19302"
+    - "stun:stun1.l.google.com:19302"
+  turn_servers: []  # Add TURN servers if needed
+  
+# Heartbeat Settings
+heartbeat:
+  interval: 30  # seconds
+  
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "vm-host.log"
+  max_size: 10485760  # 10MB
+  backup_count: 5
