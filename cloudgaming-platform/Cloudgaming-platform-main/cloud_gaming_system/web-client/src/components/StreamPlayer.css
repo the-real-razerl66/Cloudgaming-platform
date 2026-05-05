@@ -1,0 +1,169 @@
+.stream-player {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.connection-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.connecting,
+.not-connected {
+  padding: 2rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  color: #ff4444;
+  margin: 1rem 0;
+}
+
+.stats-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: monospace;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.stat .label {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.stat .value {
+  font-weight: bold;
+}
+
+.controls {
+  background: #1a1a1a;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.quality-controls,
+.connection-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.quality-controls label {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quality-controls button {
+  background: #333;
+  color: white;
+}
+
+.quality-controls button.active {
+  background: #4CAF50;
+}
+
+.quality-controls button:hover:not(:disabled) {
+  background: #555;
+}
+
+.quality-controls button.active:hover {
+  background: #45a049;
+}
+
+.connect-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.connect-button:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.disconnect-button {
+  background: #f44336;
+  color: white;
+}
+
+.disconnect-button:hover {
+  background: #da190b;
+}
+
+.session-info {
+  background: #2a2a2a;
+  color: #aaa;
+  padding: 0.5rem 1rem;
+  font-size: 12px;
+}
+
+.session-info p {
+  margin: 0.25rem 0;
+}
