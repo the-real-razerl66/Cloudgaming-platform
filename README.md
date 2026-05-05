@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 A complete, production-ready cloud gaming streaming infrastructure built with WebRTC, designed to solve major cloud gaming challenges including network latency, device compatibility, and adaptive quality streaming.
-(Moved Project files to local server storage)
+**(Moved Project files to local server storage)**
 ## 🎯 Project Overview
 
 This system enables ultra-low-latency game streaming from Linux VMs to any web browser with:
