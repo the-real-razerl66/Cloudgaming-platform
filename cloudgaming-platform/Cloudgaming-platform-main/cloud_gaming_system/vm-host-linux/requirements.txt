@@ -1,0 +1,20 @@
+# WebRTC and streaming
+aiortc==1.14.0
+aiohttp==3.13.5
+python-socketio[asyncio_client]==5.16.1
+
+# Screen capture and video processing
+av==16.1.0
+numpy==2.4.4
+opencv-python==4.13.0.92
+
+# Input injection
+pynput==1.8.1
+python-xlib==0.33
+
+# Configuration and utilities
+PyYAML==6.0.3
+python-dotenv==1.2.2
+
+# Logging
+coloredlogs==15.0.1
